@@ -1,0 +1,119 @@
+.btn-holder{
+	width:100%;
+
+	.btn, hr{
+		vertical-align: top;
+		display:inline-block;
+		margin-right:15px;
+		
+	}
+	.btn{
+		&:last-of-type{margin-right:0;}
+	}
+	hr{
+		display:inline-block;
+		width:1px;
+		height:33px;
+		border:0;
+		background:#aaa;
+		vertical-align:middle;
+		margin-top:0;margin-bottom:0;
+	}
+}
+
+.btn{
+	display:inline-block;
+	text-transform:uppercase;
+	font-size:14px;
+	line-height:normal;
+	border-radius:4px;
+	padding:12px 15px;
+	text-decoration: none;
+	text-align:center;
+	border:none;
+	cursor:pointer;
+	width: 100%;
+	min-height:41px;
+	position:relative;
+	@include transition;
+
+	@media screen and (min-width: $break-sm){
+		min-width:150px;
+		width:auto;
+	}
+
+	&-primary{
+		background: $color-primary;
+		color:#fff;
+		&:hover{
+			background:$color-primary-hover;
+		}
+	}
+
+	&-secondary{
+		background: $color-secondary;
+		color:#fff;
+		&:hover{
+			background: $color-secondary-hover;
+		}
+	}
+
+	&-alt{
+		background: #607d8b;
+		color:#fff;
+		&:hover{
+			background: #506d7b;
+		}
+	}
+
+	&-disabled, &.disabled{
+		cursor: not-allowed !important;
+		background:#aaa;
+		color:#fff;
+
+		&:hover{
+			background:#aaa !important;
+		}
+	}
+
+	&-action{
+		padding: 8px 15px;
+		font-size: 12px;
+		min-height:31px;
+	}
+
+	&-success{
+		background: $color-success;
+		color:#fff;
+	}
+
+	&.full{
+		width:100%;
+		display: block;
+	}
+}
+
+.text-link{
+	display:inline-block;
+	font-size:13px;
+	color:$color-text;
+	position:relative;
+	@include transition();
+
+	span{
+		transform: translate(0, -1px);
+		display:inline-block;
+		font-size:10px;
+	}
+
+	&:not(.disabled){
+		&:hover{
+			color:$color-primary;
+		}
+	}
+
+	&.disabled{
+		color: #aaa;
+		cursor: default;
+	}
+}

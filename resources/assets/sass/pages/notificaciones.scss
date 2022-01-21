@@ -1,0 +1,28 @@
+.notificaciones-list{
+	li{
+		border-bottom:1px solid #eee;
+
+		&:last-of-type{
+			margin-bottom:0;
+			border-bottom:none;
+		}
+
+		&.new{
+			a{ background:#f3f8fd;
+				&:hover{
+					background:#f3f8fd;
+				}
+			}
+		}
+
+		a{
+			padding:12px 16px;
+			display:block;
+			@include transition;
+
+			&:hover{
+				background: #f9f9f9;
+			}
+		}
+	}
+}

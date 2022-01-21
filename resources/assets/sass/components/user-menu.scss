@@ -1,0 +1,34 @@
+.main-header{
+	background:#fff;
+	box-shadow: 0 0 32px 0 rgba(154,161,171,.15);
+	padding: 8px 32px 8px 16px;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:10;
+
+	@media screen and (min-width: $break-sm){
+		padding:8px 32px 8px 92px;
+	}
+}
+
+#user-menu{
+	.main-logo{
+		img{
+			height: 32px;
+			width:auto;
+		}
+	}
+	.date-now{
+		color:#999;
+		font-size: 12px;
+	}
+
+	.items-hold{
+		> *{
+			margin-right:24px;
+			&:last-of-type{margin-right:0;}
+		}
+	}
+}

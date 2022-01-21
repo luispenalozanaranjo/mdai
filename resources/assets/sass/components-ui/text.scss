@@ -1,0 +1,97 @@
+h1, h2, h3, h4, h5, h6{font-family: 'Rubik', sans-serif;}
+
+p{
+	font-size:14px;
+	line-height:normal;
+	color:$color-text;
+}
+
+mark{
+	font-weight:600;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent !important;
+	&:hover{text-decoration:none;}
+}
+
+.heading{
+	&-1, &-2, &-3, &-4, &-5, &-xlarge{
+		text-transform:uppercase;
+		color:#6b747c;
+	}
+
+	&-1{font-size: 22px;line-height:normal;}
+	&-2{font-size: 20px;}
+	&-3{font-size: 18px;}
+	&-4{font-size: 16px;}
+	&-5{font-size: 14px;}
+
+	&-xlarge{font-size: 28px;}
+}
+
+.text{
+	&-success{ color: $color-success; }
+	&-error{ color: $color-error; }
+}
+
+// Fuentes
+$max: 100;
+$step: 2;
+@for $i from 2 through ceil($max/$step) {
+	$value: $i * $step;
+	.f-#{$value}{ font-size:#{$value}px; }
+}
+
+.f{
+	&-small{
+		font-size:12px;
+	}
+	&-medium{
+		font-size:16px;
+	}
+	&-large{
+		font-size: 18px;
+	}
+}
+
+.fw{
+	&-light{font-weight:300;}
+	&-normal{font-weight:400;}
+	&-semibold{font-weight:600;}
+	&-bold{font-weight: 700;}
+}
+
+.text{
+	&-lowercase, &-lwc{text-transform: lowercase !important}
+	&-uppercase, &-upc{text-transform: uppercase !important}
+	&-capitalize, &-cap{text-transform: capitalize !important}
+	
+	&-left{text-align:left !important}
+	&-right{text-align:right !important}
+	&-center{text-align:center !important}
+
+	@media (min-width: 768px) {
+		&-md-left{text-align:left !important}
+		&-md-right{text-align:right !important}
+		&-md-center{text-align:center !important}
+	}
+
+	@media (min-width: 992px) {
+		&-lg-left{text-align:left !important}
+		&-lg-right{text-align:right !important}
+		&-lg-center{text-align:center !important}
+	}
+
+	@media (min-width: 1200px) {
+		&-xl-left{text-align:left !important}
+		&-xl-right{text-align:right !important}
+		&-xl-center{text-align:center !important}
+	}
+
+	&-normal{
+		color:$color-text;
+	}
+}
